@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINDHU - Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6366f1',secondary:'#a855f7'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+from { transform: translateX(-20px); opacity: 0; }
+to { transform: translateX(0); opacity: 1; }
+}
+@keyframes scaleIn {
+from { transform: scale(0.9); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
+}
+.animate-fadeIn {
+animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-slideIn {
+animation: slideIn 0.6s ease-out forwards;
+}
+.animate-scaleIn {
+animation: scaleIn 0.5s ease-out forwards;
+}
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+}
+.glass-effect {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.hover-scale {
+transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+transform: scale(1.02);
+}
+.section-title {
+position: relative;
+display: inline-block;
+margin-bottom: 1.5rem;
+}
+.section-title::after {
+content: '';
+position: absolute;
+bottom: -8px;
+left: 0;
+width: 50px;
+height: 3px;
+background-color: #4f46e5;
+border-radius: 2px;
+}
+.timeline-item {
+position: relative;
+padding-left: 28px;
+}
+.timeline-item::before {
+content: '';
+position: absolute;
+left: 0;
+top: 6px;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: #4f46e5;
+}
+.timeline-item::after {
+content: '';
+position: absolute;
+left: 5px;
+top: 24px;
+width: 2px;
+height: calc(100% - 24px);
+background-color: #e5e7eb;
+}
+.timeline-item:last-child::after {
+display: none;
+}
+.skill-tag {
+transition: all 0.3s ease;
+}
+.skill-tag:hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+bottom: -4px;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #4f46e5;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+.print-button {
+transition: all 0.3s ease;
+}
+.print-button:hover {
+transform: translateY(-2px);
+}
+@media print {
+.no-print {
+display: none !important;
+}
+.print-section {
+page-break-inside: avoid;
+}
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header with Navigation -->
+<header class="sticky top-0 z-50 glass-effect no-print">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+
+ <h1 class="text-2xl font-['Poppins'] text-primary">Vattikayala Sindhu</h1>
+
+<nav class="hidden md:flex space-x-8">
+<a href="#about" class="nav-link text-gray-700 hover:text-primary font-medium">About</a>
+<a href="#education" class="nav-link text-gray-700 hover:text-primary font-medium">Education</a>
+<a href="#skills" class="nav-link text-gray-700 hover:text-primary font-medium">Skills</a>
+<a href="#experience" class="nav-link text-gray-700 hover:text-primary font-medium">Intrenship</a>
+<a href="#projects" class="nav-link text-gray-700 hover:text-primary font-medium">Projects</a>
+<a href="#certificates" class="nav-link text-gray-700 hover:text-primary font-medium">Certificates</a>
+</nav>
+
+</div>
+</header>
+<main class="container mx-auto px-4 py-8 max-w-5xl">
+<!-- Profile Section -->
+<section id="about" class="mb-16 print-section">
+<div class="bg-white shadow-lg rounded-lg overflow-hidden hover-scale transition-all duration-300">
+<div class="relative h-64 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 overflow-hidden animate-fadeIn">
+<div class="absolute inset-0">
+<div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20abstract%20background%20with%20soft%20gradient%20waves%20and%20geometric%20shapes%2C%20elegant%20professional%20design%20with%20purple%20and%20blue%20tones%2C%20clean%20and%20sophisticated&width=1920&height=400&seq=1&orientation=landscape'); background-size: cover; background-position: center; filter: brightness(0.9);"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+<div class="w-40 h-40 mx-auto rounded-full border-4 border-white overflow-hidden shadow-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-6xl font-bold text-white transform hover:scale-105 transition-all duration-300 animate-scaleIn" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+VS
+</div>
+</div>
+</div>
+<div class="pt-20 pb-8 px-8 text-center">
+<div class="flex flex-col items-center mb-6">
+<div>
+<h2 class="text-4xl font-bold text-gray-800 mb-2">VATTIKAYALA SINDHU</h2>
+<p class="text-xl text-gray-600 mb-6">PYTHON DEVELOPER</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4 mt-4">
+<a href="mailto:arbiyak707@gmail.com" class="flex items-center bg-gray-50 px-4 py-2 rounded-full text-gray-700 hover:text-primary hover:bg-gray-100 transition-all duration-300">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-mail-line"></i>
+</span>
+<span>sindhu65365@gmail.com</span>
+</a>
+<a href="tel:+916303676244" class="flex items-center bg-gray-50 px-4 py-2 rounded-full text-gray-700 hover:text-primary hover:bg-gray-100 transition-all duration-300">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</span>
+<span>+91 6303676244</span>
+</a>
+<span class="flex items-center bg-gray-50 px-4 py-2 rounded-full text-gray-700">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</span>
+<span>Pollireddypallem, Andhra Pradesh</span>
+</span>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-6">
+<h3 class="text-xl font-semibold mb-3">Objective</h3>
+<p class="text-gray-700 leading-relaxed">
+As a recent graduate with a bachelor's degree in Computer Science Engineering, I possess a solid foundation in programming languages and software principles. I am eager to leverage my academic achievements and technical expertise to tackle complex challenges in a dynamic professional environment.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section id="education" class="mb-16 print-section">
+<h2 class="section-title text-2xl font-bold text-gray-800">Education</h2>
+<div class="bg-white shadow-lg rounded-lg p-8 hover-scale transition-all duration-300">
+<div class="space-y-6">
+<div class="timeline-item">
+<div class="flex flex-col md:flex-row md:justify-between md:items-center">
+<h3 class="text-lg font-semibold text-gray-800">B.Tech in Electrical Engineering</h3>
+<div class="flex items-center mt-1 md:mt-0">
+<span class="text-gray-600">CGPA: 8.2</span>
+<span class="mx-2 text-gray-400">|</span>
+<span class="text-gray-600">2024</span>
+</div>
+</div>
+<p class="text-gray-700 mt-1">NBKR Institute Of Science And Technology</p>
+</div>
+<div class="timeline-item">
+<div class="flex flex-col md:flex-row md:justify-between md:items-center">
+<h3 class="text-lg font-semibold text-gray-800">Intermediate</h3>
+<div class="flex items-center mt-1 md:mt-0">
+<span class="text-gray-600">Percentage: 87%</span>
+<span class="mx-2 text-gray-400">|</span>
+<span class="text-gray-600">2020</span>
+</div>
+</div>
+<p class="text-gray-700 mt-1">AP Model School &JR Inter College</p>
+</div>
+<div class="timeline-item">
+<div class="flex flex-col md:flex-row md:justify-between md:items-center">
+<h3 class="text-lg font-semibold text-gray-800">SSC</h3>
+<div class="flex items-center mt-1 md:mt-0">
+<span class="text-gray-600">Percentage: 80%</span>
+<span class="mx-2 text-gray-400">|</span>
+<span class="text-gray-600">2018</span>
+</div>
+</div>
+<p class="text-gray-700 mt-1">AP Model School &JR Inter College</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="mb-16 print-section animate-fadeIn">
+<h2 class="section-title text-2xl font-bold text-gray-800">Skills</h2>
+<div class="bg-white shadow-lg rounded-lg p-8 hover-scale transition-all duration-300 animate-scaleIn">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-code-s-slash-line"></i>
+</span>
+Programming Languages
+</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">PYTHON</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">HTML</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">CSS</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">JavaScript(Intermediate)</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">Matlab</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">SQL</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">Linux (Intermediate)</span>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-blue-800 mb-3 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-tools-line"></i>
+</span>
+Tools
+</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">Microsoft Office</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Excel</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Word</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PowerPoint</span>
+</div>
+</div>
+<!-- <div>
+<h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-bug-line"></i>
+</span> -->
+<!-- Testing -->
+<!-- </h3> -->
+<!-- <div class="flex flex-wrap gap-2">
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Manual Testing</span>
+</div> -->
+<!-- </div> -->
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-computer-line"></i>
+</span>
+Platforms
+</h3>
+<div class="flex flex-wrap gap-2">
+  <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Git-Hub</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Visual Studio Code</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">simulink</span>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-book-open-line"></i>
+</span>
+Relevant Coursework
+</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">PYTHON Full Stack (Pyspiders)</span>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center mr-2 text-primary">
+<i class="ri-user-heart-line"></i>
+</span>
+Soft Skills
+</h3>
+<div class="flex flex-wrap gap-2">
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Excellent Communication</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Attention to Detail</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Team Building</span>
+<span class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all duration-300">Management</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section id="experience" class="mb-16 print-section">
+<h2 class="section-title text-2xl font-bold text-gray-800">Internship</h2>
+<div class="bg-white shadow-lg rounded-lg p-8 hover-scale transition-all duration-300">
+<div class="space-y-8">
+<div class="timeline-item">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start">
+<div>
+<h3 class="text-lg font-semibold text-gray-800">Python Intrenship in slash mark Approved by AICTE</h3>
+<p class="text-gray-600 mt-1">Internship</p>
+</div>
+<span class="text-gray-600 mt-1 md:mt-0">Jan 2024 - May 2024</span>
+</div>
+<ul class="mt-3 space-y-2">
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Successfully completed an AICTE-approved Python internship focused on hands-on development.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Built practical applications like a To-Do List, Chat Bot, Voice Assistant, and Password Generator.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Gained strong foundational skills in Python programming, logic building, and real-time project implementation.</span>
+</li>
+</ul>
+</div>
+<div class="timeline-item">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start">
+<div>
+<h3 class="text-lg font-semibold text-gray-800">Weberindia Infra Power(OPC)PVT Ltd</h3>
+<p class="text-gray-600 mt-1">Internship</p>
+</div>
+<span class="text-gray-600 mt-1 md:mt-0">May 2021 - May 2021</span>
+</div>
+<ul class="mt-3 space-y-2">
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Gained comprehensive knowledge of transformer fundamentals, specifications, and winding design.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Learned to perform transformer-related calculations and understand core engineering concepts.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Actively participated in the company's production process, gaining hands-on industrial exposure.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="mb-16 print-section">
+<h2 class="section-title text-2xl font-bold text-gray-800">Projects</h2>
+<div class="bg-white shadow-lg rounded-lg p-8 hover-scale transition-all duration-300">
+<div class="space-y-8">
+<div class="border-b border-gray-200 pb-8">
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+<h3 class="text-lg font-semibold text-gray-800">A novel three-phase transformer-less cascaded multilevel inverter topology  for                     
+grid connected solar PV applications.</h3>
+<span class="text-gray-600 mt-1 md:mt-0">Jan 2024 - May 2024</span>
+</div>
+<p class="text-gray-600 italic mb-3">Academic Project</p>
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Designed a transformerless three-phase grid-connected solar inverter to enhance safety by reducing leakage currents.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Improved energy conversion efficiency and system reliability, making solar power more practical and cost-effective.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Focused on optimizing real-world solar applications through advanced power electronics and control strategies.</span>
+</li>
+</ul>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">MATLAB</span>
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Inverter</span>
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Solar</span>
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+</div>
+</div>
+<div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+<h3 class="text-lg font-semibold text-gray-800">Generation of electricity using Rainwater in homes. </h3>
+<span class="text-gray-600 mt-1 md:mt-0">Sep 2023 - Dec 2023</span>
+</div>
+<p class="text-gray-600 italic mb-3">Mini Project</p>
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Successfully demonstrated electricity generation using rainwater through a functional scaled model.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Developed a system that collects and stores rainwater in a rooftop tank, simulating real-world rainwater harvesting.</span>
+</li>
+<li class="flex items-start">
+<span class="w-4 h-4 flex items-center justify-center text-primary mt-1 mr-2">
+<i class="ri-arrow-right-s-line"></i>
+</span>
+<span class="text-gray-700">Used the stored water to drive a turbine, effectively converting kinetic energy into electrical power.</span>
+</li>
+</ul>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Turbine</span>
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Batteries</span>
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Inverter</span>
+<!-- <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">CSS</span>
+<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Database Design</span> -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certificates Section -->
+<section id="certificates" class="mb-16 print-section">
+  <h2 class="section-title text-2xl font-bold text-gray-800 mb-6">Certificates</h2>
+  <div class="bg-white shadow-lg rounded-lg p-8 transition-all duration-300">
+    <div class="space-y-8">
+
+      <!-- Certificate Block -->
+      <div class="flex flex-col md:flex-row md:items-center gap-6 border-b border-gray-200 pb-6 group">
+        <div class="md:w-40 w-full overflow-hidden rounded shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+          <img src="./../documents/cloudcomputing.png" alt="Cloud Computing Certificate" class="w-full h-auto object-cover rounded">
+        </div>
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">Cloud Computing (NPTEL)</h3>
+              <p class="text-gray-700 mt-2 text-justify">
+                A 12 Week NPTEL online Certification course covering cloud computing fundamentals, management issues,
+                security challenges, and research trends. Offered by IIT Kharagpur.
+              </p>
+            </div>
+            <span class="text-gray-600 mt-2 md:mt-0 md:ml-4 whitespace-nowrap">Oct 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat Blocks for Each Certificate -->
+
+      <div class="flex flex-col md:flex-row md:items-center gap-6 border-b border-gray-200 pb-6 group">
+        <div class="md:w-40 w-full overflow-hidden rounded shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+          <img src="./../documents/data science.png" alt="Data Science Certificate" class="w-full h-auto object-cover rounded">
+        </div>
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">Data Science for Engineers (NPTEL)</h3>
+              <p class="text-gray-700 mt-2 text-justify">
+                An 8 Week course focused on extracting insights from data for business applications. Offered by IIT Madras.
+              </p>
+            </div>
+            <span class="text-gray-600 mt-2 md:mt-0 md:ml-4 whitespace-nowrap">Sep 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-center gap-6 border-b border-gray-200 pb-6 group">
+        <div class="md:w-40 w-full overflow-hidden rounded shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+          <img src="./../documents/VATTIKAYALA SINDHU  - Python (1).png" alt="Python Certificate" class="w-full h-auto object-cover rounded">
+        </div>
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">PYTHON (Kaggle)</h3>
+              <p class="text-gray-700 mt-2 text-justify">
+                An online certificate course from Kaggle focused on Python for data science and analysis.
+              </p>
+            </div>
+            <span class="text-gray-600 mt-2 md:mt-0 md:ml-4 whitespace-nowrap">Nov 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-center gap-6 border-b border-gray-200 pb-6 group">
+        <div class="md:w-40 w-full overflow-hidden rounded shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+          <img src="./../documents/sindhu html.jpg" alt="HTML Certificate" class="w-full h-auto object-cover rounded">
+        </div>
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">HTML (Mindluster)</h3>
+              <p class="text-gray-700 mt-2 text-justify">
+                An online certificate course by Mindluster focusing on HTML for web development and design basics.
+              </p>
+            </div>
+            <span class="text-gray-600 mt-2 md:mt-0 md:ml-4 whitespace-nowrap">Apr 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-center gap-6 group">
+        <div class="md:w-40 w-full overflow-hidden rounded shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+          <img src="./../documents/sqlcertificate.png" alt="SQL Certificate" class="w-full h-auto object-cover rounded">
+        </div>
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">SQL (HackerRank)</h3>
+              <p class="text-gray-700 mt-2 text-justify">
+                An online course from HackerRank focused on practical SQL database querying and problem solving.
+              </p>
+            </div>
+            <span class="text-gray-600 mt-2 md:mt-0 md:ml-4 whitespace-nowrap">Sep 2024</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Declaration Section -->
+<section class="mb-16 print-section">
+<div class="bg-white shadow-lg rounded-lg p-8 hover-scale transition-all duration-300">
+<h2 class="text-xl font-semibold text-gray-800 mb-4">Declaration</h2>
+<p class="text-gray-700 text-center">
+I (VATTIKAYALA SINDHU) declare that the above furnished details are true to my knowledge.
+</p>
+<!-- <div class="mt-8 flex justify-end">
+<div class="text-right"> -->
+<!-- <p class="text-gray-700 font-medium">Signature</p>
+<p class="text-gray-700 mt-6">Vattikayal Sindhu</p> -->
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 text-white py-12 no-print">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<h3 class="text-xl font-['Poppins'] mb-2">Vattikayala Sindhu</h3>
+<p class="text-gray-400">Electrical Electronics Engineer</p>
+</div>
+<div class="flex space-x-4">
+<a href="mailto:sindhu65365@gmail.com" class="hover:text-primary transition-colors">
+<span class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+<i class="ri-mail-line"></i>
+</span>
+</a>
+<a href="tel:+916303676244" class="hover:text-primary transition-colors">
+<span class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+<i class="ri-phone-line"></i>
+</span>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Add animation delays to skill tags
+document.querySelectorAll('.skill-tag').forEach((tag, index) => {
+tag.style.setProperty('--skill-index', index);
+tag.classList.add('animate-slideIn');
+});
+// Active navigation link highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+function highlightNavLink() {
+const scrollPosition = window.scrollY;
+sections.forEach(section => {
+const sectionTop = section.offsetTop - 100;
+const sectionHeight = section.offsetHeight;
+const sectionId = section.getAttribute('id');
+if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === #${sectionId}) {
+link.classList.add('active');
+}
+});
+}
+});
+}
+window.addEventListener('scroll', highlightNavLink);
+highlightNavLink(); // Call once on page load
+});
+</script>
+</body>
+</html>
